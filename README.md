@@ -10,7 +10,7 @@ To install mysql
 (mac users)
 $ brew install mysql 
 
-(for linux users)
+(linux users)
 $ sudo apt-get update 					
 $ sudo apt-get install mysql-server
 
