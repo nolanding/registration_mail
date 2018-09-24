@@ -10,7 +10,7 @@ from email.mime.base import MIMEBase
 from email.encoders import encode_base64
 
 # from db import *
-conn=pymysql.connect("localhost","root","12345678","company")
+conn=pymysql.connect("localhost","root","password","company")
 cursor= conn.cursor()
 cursor.execute("SELECT VERSION()")
 sql="create table employee(first_name char(20),last_name char(20), age char(3),sex char(1),income char(56),email char(30))"
