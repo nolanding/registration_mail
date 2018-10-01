@@ -87,8 +87,17 @@ while(flag):
 		 
 		# Your SMTP server information
 		s_information = smtplib.SMTP('localhost',1025)
-		#smtplib.SMTP('smtp.your-domain.com', 25) ## if want to connect to server, login into sender's mail account.
+		#smtplib.SMTP('smtp.your-domain.com', xyz) ## if want to connect to server, login into sender's mail account.
 		#s_information.login('UserName','Your Password')
+		#in place of port xyz 
+		# – SMTP port 587 is one of the best choices for nearly every use case for connecting to Pepipost
+
+		# – Port 25 is the default port used for relaying
+
+		# – Port 465 should no longer be used at all
+
+		# – Port 2525 used when all other port is blocked
+		
 		s_information.sendmail(msg['From'], msg['To'], msg.as_string())
 		s_information.quit()
 
